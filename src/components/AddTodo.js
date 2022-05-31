@@ -36,8 +36,8 @@ const AddTodo = ({ onAddTodo, submitted, setSubmitted }) => {
             </button>
           </div>
           {submitted && (
-            <div class="bg-purple-100 border-l-4 border-purple-500 text-purple-700 p-4" role="alert">
-            <p class="font-bold">Successfully added a todo!</p>
+            <div className="bg-purple-100 border-l-4 border-purple-500 text-purple-700 p-4" role="alert">
+            <p className="font-bold">Successfully added a todo!</p>
           </div>
           )}
         </div>
