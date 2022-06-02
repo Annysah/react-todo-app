@@ -1,16 +1,10 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import AddTodo from "./components/AddTodo";
 import Todos from './components/Todos'
 
 const App = () => {
-  const initialTodos = JSON.parse(localStorage.getItem('todos')) || [];
-  const [todos, setTodos] = useState(initialTodos)
+  const [todos, setTodos] = useState([])
   const [submitted, setSubmitted] = useState(false)
-
-
-  useEffect(() => {
-    localStorage.setItem('todos', JSON.stringify(todos))
-  }, [todos]);
 
   const markTodo = (id) => {
     const newTodos = todos.map(todo => {
